@@ -6,10 +6,7 @@ import utils.JDBCUtils;
 
 import java.sql.Connection;
 
-/**
- * @author lrd
- * @date 2022-08-17 上午9:42
- */
+
 public class JDBCutilTest {
     @Test
     public void test1(){
