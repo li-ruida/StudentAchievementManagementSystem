@@ -6,9 +6,9 @@ import utils.JDBCCRUD;
 
 public class JDBCutilTest {
     @Test
-    public void test1(){
-        String sql="insert into student values(?,?,?)";
-        JDBCCRUD.update(sql,10015,"李正","123456");
+    public void test1() {
+        String sql = "insert into student values(?,?,?)";
+        JDBCCRUD.update(sql, 10015, "李正", "123456");
 
     }
 
