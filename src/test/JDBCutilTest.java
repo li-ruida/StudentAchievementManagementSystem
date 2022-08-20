@@ -2,9 +2,6 @@ package test;
 
 import org.junit.Test;
 import utils.JDBCCRUD;
-import utils.JDBCUtils;
-
-import java.sql.Connection;
 
 
 public class JDBCutilTest {
