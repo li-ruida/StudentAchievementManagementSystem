@@ -23,4 +23,3 @@ public interface ClassStuDao {
 
     void updateClassstu(Connection conn,Classstu classstu);//更新信息
 }
-

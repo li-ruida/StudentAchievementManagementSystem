@@ -8,7 +8,7 @@ import java.util.List;
 public interface StudentDao {
     List<Student> getStudent();
 
-    void saveStudent(Connection conn,Student student);//插入
+    void saveStudent( Connection conn,Student student);
 
     void deleteStudentById(Connection conn, int sid);//删除
 

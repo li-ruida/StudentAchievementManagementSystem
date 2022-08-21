@@ -2,7 +2,6 @@ package dao;
 
 
 import bean.Classstu;
-import bean.Student;
 
 
 import java.sql.Connection;
@@ -40,4 +39,5 @@ public class ClassStuDaoImpl extends BaseDao<Classstu> implements ClassStuDao{
         String sql="update classstu set cid =? sid=? sgrad=?  where sid=? cid=?";
         BaseDao.update(conn,sql,classstu.getCid(),classstu.getSid(),classstu.getSgrad(),classstu.getSid(),classstu.getCid());
     }
+
 }

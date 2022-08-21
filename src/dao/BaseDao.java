@@ -1,11 +1,8 @@
 package dao;
 
-import utils.JDBCCRUD;
-import utils.JDBCUtils;
+import utils.*;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -163,4 +160,5 @@ public abstract class BaseDao<T> {
         }
         return null;
     }
+
 }

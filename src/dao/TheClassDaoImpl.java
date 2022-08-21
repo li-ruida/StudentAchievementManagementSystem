@@ -1,7 +1,6 @@
 package dao;
 
 
-import bean.Teacher;
 import bean.TheClass;
 
 import java.sql.Connection;

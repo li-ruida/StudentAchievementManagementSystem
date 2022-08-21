@@ -16,7 +16,8 @@ public class JDBCUtils {
         PreparedStatement ps = null;
         try {
             //1.加载配置文件
-            InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+            //InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+            InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream("jdbc.properties");
             Properties pros = new Properties();
             try {
                 pros.load(is);
