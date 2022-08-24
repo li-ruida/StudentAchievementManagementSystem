@@ -1,0 +1,210 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url("/image/rbg.png");
+    font-family: Arial;
+
+}
+* {
+    box-sizing: border-box;
+}
+
+#topimg{
+    float: left;
+    padding-top: 5px;
+    font-size:40px;
+}
+
+#top1{
+    text-shadow: rgb(69, 131, 167);
+    color: rgb(239, 246, 246);
+    font-size:22px;
+    text-align:center
+}
+
+
+/* 导航条 */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(15, 93, 135);
+}
+
+.loginbtn {
+    border: 0;
+    font-family:SourceHanSansSC; 
+    font-weight:400; 
+    font-size:17px; 
+    color:rgb(102, 102, 102); 
+    font-style:normal; 
+    letter-spacing:0px; 
+    line-height:25px; 
+    text-decoration:none;
+}
+
+.loginbtn:hover {background-color: #3e8e41}
+
+.loginbtn:active {
+    background-color: #3164ac;
+    box-shadow: 0 5px rgb(55, 144, 200);
+
+}
+.loginbd{
+    width: 400px; 
+    height: 350px; 
+    border-style: none; 
+    border-color: unset; 
+    box-shadow: rgba(145, 145, 145, 0.17) 0px 2px 6px 0px; 
+    border-radius: 8px; font-size: 14px; 
+    padding: 0px; 
+    text-align: center; 
+    line-height: 20px; 
+    margin-top: 100px;
+    margin-left: 80px;
+    font-weight: normal; 
+    font-style: normal; 
+    background: rgb(255, 255, 255);
+}
+
+.l20{
+    width: 320px; 
+    height: 46px; 
+    border-color: rgb(220, 224, 231); 
+    border-width: 1px; 
+    border-style: solid; 
+    color: rgb(56, 148, 255); 
+    border-radius: 3px; 
+    font-size: 14px; 
+    padding: 0px; 
+    text-align: center; 
+    line-height: 20px; 
+    font-weight: normal; 
+    font-style: normal; 
+    background: rgb(255, 255, 255);
+}
+.btn1{
+    width: 350px;
+    height:50px; 
+    border-style: none; 
+    border-color: unset; 
+    color: rgb(255, 255, 255); 
+    border-radius: 5px; 
+    font-size: 16px; 
+    padding: 0px; 
+    text-align: center; 
+    line-height: 23px; 
+    font-weight: normal; 
+    font-style: normal; 
+    background: rgb(3, 187, 122);
+}
+
+.btn2{
+    width: 80px;
+    height: 30px; 
+    border-style: none; 
+    border-color: unset; 
+    color: rgb(255, 255, 255); 
+    border-radius: 8px; 
+    font-size: 16px; 
+    padding: 0px; 
+    text-align: right; 
+    line-height: 23px; 
+    font-weight: normal; 
+    font-style: normal; 
+    background: rgb(86, 83, 83);
+}
+
+/* 导航条链接 */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* 链接颜色修改 */
+.topnav a:hover {
+    background-color: rgb(8, 96, 123);
+    color: black;
+}
+
+/* 创建两列 */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 60%;
+
+    border-style: none; 
+    border-color: unset; 
+    box-shadow: rgba(145, 145, 145, 0.17) 0px 2px 6px 0px; 
+    border-radius: 8px; 
+    font-size: 14px; 
+    padding: 0px;  
+    line-height: 20px; 
+    margin-top: 30px;
+    margin-left: 30px;
+    font-weight: normal; 
+    font-style: normal; 
+    background: rgb(255, 255, 255);
+    background-image: url("/image/rbg.png");
+
+    text-align: center;
+}
+
+/* 右侧栏 */
+.rightcolumn {
+    float: left;
+    width: 35%;
+    padding-left: 30px;
+}
+
+/* 图像部分 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 文章卡片效果 */
+.card {
+    background-color: white;
+    background-origin:content-box;
+    background-repeat:no-repeat;
+    background-image: url("/image/rbg.png");
+}
+
+/* 列后面清除浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+
+
+
+
+
+
+
+
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
