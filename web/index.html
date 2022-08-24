@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩管理系统</title>
+    <link rel="icon" href="/image/xhxh.png">
+    <link rel="stylesheet" href="/css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <img src="/image/xiaohui.svg" alt="校徽" width="200px" id="topimg">
+        <a href="#" id="top1">学生成绩管理系统</a>
+    </div>
+    <div class="row">
+        <div class="leftcolumn" >
+            <div class="card">
+                <h1 style="color: rgb(34, 34, 117);"><b><b>欢迎使用</b></b>成绩管理系统</h1>
+                <h2 onload="time()">
+                    <span id="time"></span>
+                </h2>
+                <img src="/image/tb1.png">
+                <p style="color: rgb(30, 92, 123);">祝各位同学都能取得一个好成绩</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+
+                <div class="loginbd">
+                    <div class="text">
+                        <p>&nbsp;</p>
+                        <form action="tlogin" method="post" id="tloginform">
+                            <div id="login_div_teacher">
+                                
+                                <img src="/image/xiaohui.svg" alt="校徽" width="300px"  style="text-align: center;">
+                                <table>
+                                    <tr>
+                                        <td><img src="/image/id.png" alt="账户" width="30px" id="topimg" style="margin-left: 25px;"></td>
+                                        <td><input type="text" name="tid" id="tid" value="" placeholder="职工号/学号" class="l20"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="/image/lock.png" alt="密码" width="30px" id="topimg" style="margin-left: 25px;"></td>
+                                        <td><input type="password" name="password" id="password" value="" placeholder="密码" class="l20"/></td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <th colspan="2">
+                                            
+                                            <div class="login_box_checkbox" style="text-align: left;"> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="checkbox" name="none" id="rememberName">
+                                                <span class="login_box_checkbox_label">      记住用户名</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <input type="reset" class="btn2" value="重填      " />
+                                                <br>
+                                            </div>
+                                            <br>
+                                            <input type="submit" class="btn1" value="登录">
+                                            
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+        
+                        </form>
+
+
+                        
+                    </div>
+                </div>
+
+                
+
+                
+            
+        </div>
+    </div>
+
+
+</body>
+
+</html>
