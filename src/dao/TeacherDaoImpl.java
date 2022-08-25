@@ -18,7 +18,7 @@ public class TeacherDaoImpl extends BaseDao<Teacher> implements TeacherDao{
     @Override
     public void saveTeacher(Connection conn, Teacher teacher) {
         String sql="insert into teacher VALUES (?,?,?)";
-        BaseDao.update(conn,sql,teacher.getTid(),teacher.getTname(),teacher.getTpassword());
+        BaseDao.update(conn,sql,teacher.getTid(),teacher.getTname(),teacher.getPassword());
     }
 
     @Override
@@ -36,6 +36,6 @@ public class TeacherDaoImpl extends BaseDao<Teacher> implements TeacherDao{
     @Override
     public void updateTeacher(Connection conn, Teacher teacher) {
         String sql="update teacher set tid=? tname=? password=? where tid=?";
-        BaseDao.update(conn,sql,teacher.getTid(),teacher.getTname(),teacher.getTpassword(),teacher.getTid());
+        BaseDao.update(conn,sql,teacher.getTid(),teacher.getTname(),teacher.getPassword(),teacher.getTid());
     }
 }

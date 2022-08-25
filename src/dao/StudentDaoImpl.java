@@ -18,7 +18,7 @@ public class StudentDaoImpl extends BaseDao<Student> implements StudentDao{
     @Override
     public void saveStudent(Connection conn,Student student) {
         String sql="insert into student VALUES (?,?,?)";
-        BaseDao.update(conn,sql,student.getSid(),student.getSname(),student.getSpassword());
+        BaseDao.update(conn,sql,student.getSid(),student.getSname(),student.getPassword());
     }
 
     @Override
@@ -36,6 +36,6 @@ public class StudentDaoImpl extends BaseDao<Student> implements StudentDao{
     @Override
     public void updateStudent(Connection conn, Student student) {
         String sql="update student set sid=? sname=? password=? where sid=?";
-        BaseDao.update(conn,sql,student.getSid(),student.getSname(),student.getSpassword(),student.getSid());
+        BaseDao.update(conn,sql,student.getSid(),student.getSname(),student.getPassword(),student.getSid());
     }
 }

@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="StudentAchievementManagementSystem:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/StudentAchievementManagementSystem_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="StudentAchievementManagementSystem" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="JUnit4" module-name="StudentAchievementManagementSystem" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.30 (2)" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.30" />
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="lib (2)" />
+          <element id="library" level="project" name="lib (3)" />
+        </element>
+      </element>
+      <element id="library" level="project" name="mysql-connector-java-8.0.30 (3)" />
+      <element id="javaee-facet-resources" facet="StudentAchievementManagementSystem/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Teacher {
     private int tid;
     private String tname;
-    private String tpassword;
+    private String password;
 
     public int getTid() {
         return tid;
@@ -26,21 +26,21 @@ public class Teacher {
         this.tname = tname;
     }
 
-    public String getTpassword() {
-        return tpassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setTpassword(String tpassword) {
-        this.tpassword = tpassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Teacher() {
     }
 
-    public Teacher(int tid, String tname, String tpassword) {
+    public Teacher(int tid, String tname, String password) {
         this.tid = tid;
         this.tname = tname;
-        this.tpassword = tpassword;
+        this.password = password;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class Teacher {
         return "Teacher{" +
                 "tid=" + tid +
                 ", tname='" + tname + '\'' +
-                ", tpassword='" + tpassword + '\'' +
+                ", tpassword='" + password + '\'' +
                 '}';
     }
 
@@ -57,11 +57,11 @@ public class Teacher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Teacher teacher = (Teacher) o;
-        return tid == teacher.tid && Objects.equals(tname, teacher.tname) && Objects.equals(tpassword, teacher.tpassword);
+        return tid == teacher.tid && Objects.equals(tname, teacher.tname) && Objects.equals(password, teacher.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(tid, tname, tpassword);
+        return Objects.hash(tid, tname, password);
     }
 }
