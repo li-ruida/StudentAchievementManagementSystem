@@ -29,7 +29,7 @@ public class TeacherDaoImpl extends BaseDao<Teacher> implements TeacherDao{
 
     @Override
     public Teacher getTeacherById(Connection conn, int tid) {
-        String sql="select from teacher where tid = ?";
+        String sql="select * from teacher where tid = ?";
         return BaseDao.getInstance(Teacher.class,sql,tid);
     }
 

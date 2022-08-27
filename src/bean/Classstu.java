@@ -15,6 +15,103 @@ public class Classstu {
     private int cid;
     private int sid;
     private int sgrad;
+    private String cname;
+
+    private int semid;
+    private int credit;
+    private String sname;
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+    public Classstu(int cid, int sid, int sgrad, String cname, int semid, int credit, String sname) {
+        this.cid = cid;
+        this.sid = sid;
+        this.sgrad = sgrad;
+        this.cname = cname;
+        this.semid = semid;
+        this.credit = credit;
+        this.sname = sname;
+    }
+
+    public Classstu(int cid, int sid, int sgrad, String cname, int semid, int credit) {
+        this.cid = cid;
+        this.sid = sid;
+        this.sgrad = sgrad;
+        this.cname = cname;
+        this.semid = semid;
+        this.credit = credit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Classstu classstu = (Classstu) o;
+        return cid == classstu.cid && sid == classstu.sid && sgrad == classstu.sgrad && semid == classstu.semid && credit == classstu.credit && Objects.equals(cname, classstu.cname) && Objects.equals(sname, classstu.sname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cid, sid, sgrad, cname, semid, credit, sname);
+    }
+
+    @Override
+    public String toString() {
+        return "Classstu{" +
+                "cid=" + cid +
+                ", sid=" + sid +
+                ", sgrad=" + sgrad +
+                ", cname='" + cname + '\'' +
+                ", semid=" + semid +
+                ", credit=" + credit +
+                ", sname='" + sname + '\'' +
+                '}';
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public Classstu(int cid, int sid, int sgrad, String cname, int semid) {
+        this.cid = cid;
+        this.sid = sid;
+        this.sgrad = sgrad;
+        this.cname = cname;
+        this.semid = semid;
+    }
+
+    public int getSemid() {
+        return semid;
+    }
+
+    public void setSemid(int semid) {
+        this.semid = semid;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public Classstu(int cid, int sid, int sgrad, String cname) {
+        this.cid = cid;
+        this.sid = sid;
+        this.sgrad = sgrad;
+        this.cname = cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
     public Classstu(int cid, int sid, int sgrad) {
         this.cid = cid;
@@ -49,25 +146,4 @@ public class Classstu {
         this.sgrad = sgrad;
     }
 
-    @Override
-    public String toString() {
-        return "Classstu{" +
-                "cid=" + cid +
-                ", sid=" + sid +
-                ", sgrad=" + sgrad +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Classstu classstu = (Classstu) o;
-        return cid == classstu.cid && sid == classstu.sid && sgrad == classstu.sgrad;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(cid, sid, sgrad);
-    }
 }

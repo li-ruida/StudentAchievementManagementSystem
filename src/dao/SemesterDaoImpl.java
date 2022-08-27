@@ -19,8 +19,8 @@ public class SemesterDaoImpl extends BaseDao<Semester> implements SemesterDao{
 
     @Override
     public void saveSemester(Connection conn, Semester semester) {
-        String sql="insert into semester VALUES (?,?)";
-        BaseDao.update(conn,sql,semester.getCid(),semester.getScname());
+        String sql="insert into semester VALUES (?,?,?)";
+        BaseDao.update(conn,sql,semester.getCid(),semester.getScname(),semester.getSemid());
     }
 
     @Override
@@ -31,13 +31,13 @@ public class SemesterDaoImpl extends BaseDao<Semester> implements SemesterDao{
 
     @Override
     public Semester getSemesterById(Connection conn, int cid) {
-        String sql="select from semester where cid = ? ";
+        String sql="select  * from semester where cid = ? ";
         return BaseDao.getInstance(Semester.class,sql,cid);
     }
 
     @Override
     public void updateSemester(Connection conn, Semester semester) {
-        String sql="update semester set cid =? scname= ? where cid=?";
-        BaseDao.update(conn,sql,semester.getCid(),semester.getScname(),semester.getCid());
+        String sql="update semester set cid =? scname= ? semid=? where cid=?";
+        BaseDao.update(conn,sql,semester.getCid(),semester.getScname(),semester.getSemid(),semester.getCid());
     }
 }

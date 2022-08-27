@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Student {
     private int sid;
     private String sname;
-    private String spassword;
+    private String password;
 
     public int getSid() {
         return sid;
@@ -26,21 +26,21 @@ public class Student {
         this.sname = sname;
     }
 
-    public String getSpassword() {
-        return spassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSpassword(String spassword) {
-        this.spassword = spassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Student() {
     }
 
-    public Student(int sid, String sname, String spassword) {
+    public Student(int sid, String sname, String password) {
         this.sid = sid;
         this.sname = sname;
-        this.spassword = spassword;
+        this.password = password;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class Student {
         return "Student{" +
                 "sid=" + sid +
                 ", sname='" + sname + '\'' +
-                ", sstring='" + spassword + '\'' +
+                ", sstring='" + password + '\'' +
                 '}';
     }
 
@@ -57,11 +57,11 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return sid == student.sid && Objects.equals(sname, student.sname) && Objects.equals(spassword, student.spassword);
+        return sid == student.sid && Objects.equals(sname, student.sname) && Objects.equals(password, student.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(sid, sname, spassword);
+        return Objects.hash(sid, sname, password);
     }
 }

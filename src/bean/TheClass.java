@@ -9,6 +9,45 @@ public class TheClass {
     private int cid;
     private String cname;
     private int tid;
+    private int credit;
+
+    @Override
+    public String toString() {
+        return "TheClass{" +
+                "cid=" + cid +
+                ", cname='" + cname + '\'' +
+                ", tid=" + tid +
+                ", credit=" + credit +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TheClass theClass = (TheClass) o;
+        return cid == theClass.cid && tid == theClass.tid && credit == theClass.credit && Objects.equals(cname, theClass.cname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cid, cname, tid, credit);
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public TheClass(int cid, String cname, int tid, int credit) {
+        this.cid = cid;
+        this.cname = cname;
+        this.tid = tid;
+        this.credit = credit;
+    }
 
     public TheClass() {
     }
@@ -43,25 +82,4 @@ public class TheClass {
         this.tid = tid;
     }
 
-    @Override
-    public String toString() {
-        return "TheClass{" +
-                "cid=" + cid +
-                ", cname='" + cname + '\'' +
-                ", tid=" + tid +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        TheClass theClass = (TheClass) o;
-        return cid == theClass.cid && tid == theClass.tid && Objects.equals(cname, theClass.cname);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(cid, cname, tid);
-    }
 }

@@ -16,8 +16,8 @@ public class TheClassDaoImpl extends BaseDao<TheClass> implements TheClassDao{
 
     @Override
     public void saveTheClass(Connection conn, TheClass theclass) {
-        String sql="insert into class VALUES (?,?,?)";
-        BaseDao.update(conn,sql,theclass.getCid(),theclass.getCname(),theclass.getTid());
+        String sql="insert into class VALUES (?,?,?,?)";
+        BaseDao.update(conn,sql,theclass.getCid(),theclass.getCname(),theclass.getTid(),theclass.getCredit());
     }
 
     @Override
@@ -28,13 +28,13 @@ public class TheClassDaoImpl extends BaseDao<TheClass> implements TheClassDao{
 
     @Override
     public TheClass getTheClassById(Connection conn, int cid) {
-        String sql="select from class where cid = ?";
+        String sql="select  * from class where cid = ?";
         return BaseDao.getInstance(TheClass.class,sql,cid);
     }
 
     @Override
     public void updateTheClass(Connection conn, TheClass theclass) {
-        String sql="update class set cid=? cname=? tid=? where tid=?";
-        BaseDao.update(conn,sql,theclass.getCid(),theclass.getCname(),theclass.getTid(),theclass.getTid());
+        String sql="update class set cid=? cname=? tid=? credit=? where tid=?";
+        BaseDao.update(conn,sql,theclass.getCid(),theclass.getCname(),theclass.getTid(),theclass.getCredit(),theclass.getTid());
     }
 }

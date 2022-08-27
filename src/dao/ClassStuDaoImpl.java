@@ -18,8 +18,8 @@ public class ClassStuDaoImpl extends BaseDao<Classstu> implements ClassStuDao{
 
     @Override
     public void saveClassstu(Connection conn, Classstu classstu) {
-        String sql="insert into classstu VALUES (?,?,?)";
-        BaseDao.update(conn,sql,classstu.getCid(),classstu, classstu.getSid(),classstu.getSgrad());
+        String sql="insert into classstu VALUES (?,?,?,?,?,?,?)";
+        BaseDao.update(conn,sql,classstu.getCid(),classstu, classstu.getSid(),classstu.getSgrad(),classstu.getCname(),classstu.getSemid(),classstu.getCredit(),classstu.getSname());
     }
 
     @Override
@@ -30,14 +30,14 @@ public class ClassStuDaoImpl extends BaseDao<Classstu> implements ClassStuDao{
 
     @Override
     public Classstu getClassstuById(Connection conn, int cid, int sid) {
-        String sql="select from classstu where cid = ? sid=? ";
+        String sql="select *  from classstu where cid = ? sid=? ";
         return BaseDao.getInstance(Classstu.class,sql,cid,sid);
     }
 
     @Override
     public void updateClassstu(Connection conn, Classstu classstu) {
-        String sql="update classstu set cid =? sid=? sgrad=?  where sid=? cid=?";
-        BaseDao.update(conn,sql,classstu.getCid(),classstu.getSid(),classstu.getSgrad(),classstu.getSid(),classstu.getCid());
+        String sql="update classstu set cid =? sid=? sgrad=? cname=? semid=? credit=? sname=? where sid=? and cid=?";
+        BaseDao.update(conn,sql,classstu.getCid(),classstu.getSid(),classstu.getSgrad(),classstu.getCname(),classstu.getSemid(),classstu.getCredit(),classstu.getSname(),classstu.getSid(),classstu.getCid());
     }
 
 }
