@@ -15,3 +15,11 @@ function time(){
     document.getElementById("time").innerHTML=currentTime;
 }
 setInterval("time()",1000);
+
+function validateForm() {
+    var x = document.forms["myForm"]["id"].value;
+    if (x == null || x == "") {
+        alert("值不能为空");
+        return false;
+    }
+}

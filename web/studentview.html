@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩管理系统</title>
+    <link rel="icon" href="/image/xhxh.png">
+    <link rel="stylesheet" href="/css/student.css">
+    <script src="/js/student.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <img src="/image/xiaohui.svg" alt="校徽" width="200px" id="topimg">
+        <a href="#" id="top1">学生成绩</a>
+        <div style="text-align: right; margin-top: 15px;">
+            <span class="welcome1">你好,</span>
+            <span class="welcome1" th:text="${session.student.sname}">人名</span>
+            <span class="welcome1">同学&nbsp;&nbsp;</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="selection">
+            <form action="/student" method="post">
+                <span class="filter">选择学期：</span>
+                <select class="w1" name="semid1">
+                    <option selected value="0" name="semid1">...</option>
+                    <option th:each="sem:${session.semlist}" th:value="${sem.semid}" th:text="${sem.scname}" name="semid1" >2022-2023学年第三学期</option>
+                </select>
+                <input type="submit" class="sc1" value="查询">
+                <input type="reset" class="sc2" value="重置">
+            </form>
+
+        </div>
+        <div class="result">
+            <table id="tbl_stu" >
+                <tr>
+                    <th class="w20">课程代码</th>
+                    <th class="w20">课程名称</th>
+                    <th class="w20">学分</th>
+                    <th class="w20">绩点</th>
+                    <th class="w20">成绩</th>
+
+                </tr>
+                <tr th:if="${#lists.isEmpty(session.gradelist)}">
+                    <td colspan="5">没有对应的信息!</td>
+                </tr>
+                <tr th:unless="${#lists.isEmpty(session.gradelist)}"  th:each="classandstu: ${session.gradelist}" >
+                    <td class="w20" th:text="${classandstu.cid}"></td >
+                    <td class="w20" th:text="${classandstu.cname}"></td>
+                    <td class="w20" th:text="${classandstu.credit}"></td>
+                    <td class="w20" th:text="${classandstu.sgrad}/20"></td>
+                    <td class="w20" th:text="${classandstu.sgrad}"></td>
+                </tr>
+
+            </table>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
