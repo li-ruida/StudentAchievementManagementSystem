@@ -34,7 +34,7 @@ public class TheClassDaoImpl extends BaseDao<TheClass> implements TheClassDao{
 
     @Override
     public void updateTheClass(Connection conn, TheClass theclass) {
-        String sql="update class set cid=? cname=? tid=? credit=? where tid=?";
+        String sql="update class set cid=? ,cname=? ,tid=? ,credit=? where tid=?";
         BaseDao.update(conn,sql,theclass.getCid(),theclass.getCname(),theclass.getTid(),theclass.getCredit(),theclass.getTid());
     }
 }

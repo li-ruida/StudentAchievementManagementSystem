@@ -35,7 +35,7 @@ public class TeacherDaoImpl extends BaseDao<Teacher> implements TeacherDao{
 
     @Override
     public void updateTeacher(Connection conn, Teacher teacher) {
-        String sql="update teacher set tid=? tname=? password=? where tid=?";
+        String sql="update teacher set tid=? ,tname=? ,password=? where tid=?";
         BaseDao.update(conn,sql,teacher.getTid(),teacher.getTname(),teacher.getPassword(),teacher.getTid());
     }
 }

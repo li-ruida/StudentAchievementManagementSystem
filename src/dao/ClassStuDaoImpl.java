@@ -36,7 +36,7 @@ public class ClassStuDaoImpl extends BaseDao<Classstu> implements ClassStuDao{
 
     @Override
     public void updateClassstu(Connection conn, Classstu classstu) {
-        String sql="update classstu set cid =? sid=? sgrad=? cname=? semid=? credit=? sname=? where sid=? and cid=?";
+        String sql="update classstu set cid =? ,sid=? ,sgrad=? ,cname=? ,semid=? ,credit=? ,sname=? where sid=? and cid=?";
         BaseDao.update(conn,sql,classstu.getCid(),classstu.getSid(),classstu.getSgrad(),classstu.getCname(),classstu.getSemid(),classstu.getCredit(),classstu.getSname(),classstu.getSid(),classstu.getCid());
     }
 

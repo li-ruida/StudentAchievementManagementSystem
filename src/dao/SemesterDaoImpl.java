@@ -37,7 +37,7 @@ public class SemesterDaoImpl extends BaseDao<Semester> implements SemesterDao{
 
     @Override
     public void updateSemester(Connection conn, Semester semester) {
-        String sql="update semester set cid =? scname= ? semid=? where cid=?";
+        String sql="update semester set cid =? ,scname= ? ,semid=? where cid=?";
         BaseDao.update(conn,sql,semester.getCid(),semester.getScname(),semester.getSemid(),semester.getCid());
     }
 }
