@@ -12,5 +12,4 @@ select distinct  * from student;
 
 update classstu set sgrad =? where cid =? and sid=?;
 
-
 update student set sname='测试人名1' ,password='123456' where sid=11111;
