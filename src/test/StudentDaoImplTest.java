@@ -30,6 +30,7 @@ public class StudentDaoImplTest {
         StudentDao studentDao = new StudentDaoImpl();
         studentDao.deleteStudentById(connection,11111);
     }
+
     @Test
     public void getstu(){
         Connection connection=JDBCUtils.getConnection();
