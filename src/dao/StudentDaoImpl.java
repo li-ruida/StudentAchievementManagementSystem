@@ -32,14 +32,9 @@ public class StudentDaoImpl extends BaseDao<Student> implements StudentDao{
         String sql="select * from student where sid = ?";
         return BaseDao.getInstance(Student.class,sql,sid);
     }
-/*
-You have an error in your SQL syntax; check the
-manual that corresponds to your MySQL server version for the right syntax
-to use near 'from student where sid = 10001' at line 1
- */
     @Override
     public void updateStudent(Connection conn, Student student) {
-        String sql="update student set sid=? sname=? password=? where sid=?";
-        BaseDao.update(conn,sql,student.getSid(),student.getSname(),student.getPassword(),student.getSid());
+        String sql="update student set sname=? ,password=? where sid=?";
+        BaseDao.update(conn,sql,student.getSname(),student.getPassword(),student.getSid());
     }
 }

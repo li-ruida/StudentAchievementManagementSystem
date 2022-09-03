@@ -26,9 +26,6 @@ function $(id){
 }
 
 
-
-
-
 function trBindEvent(tr){
     //1.绑定鼠标悬浮以及离开时设置背景颜色事件
     tr.onmouseover = showBGColor;
